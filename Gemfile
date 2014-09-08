@@ -4,7 +4,12 @@ source "https://arDRvEcJbSandbwCLMTU@gem.fury.io/challengeposttech/"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0.rc1'
 # Use pg as the database for Active Record
-gem 'pg'
+group :production do
+  gem 'pg'
+end
+group :development do
+  gem 'sqlite3'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.1'
 # Use Uglifier as compressor for JavaScript assets
@@ -15,7 +20,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem "reimagine2"
-gem "reimagine"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
