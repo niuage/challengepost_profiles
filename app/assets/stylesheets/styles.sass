@@ -201,8 +201,10 @@ $menu-border-size: 0.4em
     bottom: 0
 
   li
-    float: left
     margin-right: 2em
+
+    @media #{$small}
+      float: left
 
     a
       font-size: 0.825em
