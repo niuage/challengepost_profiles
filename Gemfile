@@ -14,9 +14,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-gem "reimagine2", git: "git://github.com/challengepost/reimagine.git", branch: "reimagine_2"
-
-gem "reimagine",              git: "git://github.com/challengepost/reimagine.git", branch: "master"
+gem "reimagine2"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
