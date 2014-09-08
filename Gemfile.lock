@@ -85,6 +85,12 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    reimagine (2.0.0)
+      coffee-rails
+      compass-rails (~> 2.0.alpha.0)
+      rails
+      sass-rails
+      zurb-foundation (~> 4)
     reimagine2 (2.0.55)
       coffee-rails
       compass-rails
@@ -135,6 +141,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 4.1.0.rc1)
+  reimagine
   reimagine2
   sass-rails (~> 4.0.1)
   sdoc (~> 0.4.0)
