@@ -1,0 +1,247 @@
+@import 'foundation'
+@import 'reimagine2'
+
+$header-padding: 40px
+
+$body-bg-color: #f0f0f0
+
+body, html
+  background: $body-bg-color
+  font-family: 'Helvetica Neue', Helvetica
+
+.content-container
+  padding:
+    left: 20px
+    right: 20px
+
+  @media #{$small}
+    padding:
+      left: 70px
+      right: 70px
+
+#header
+  background: #3b3b3b url(http://www.diogoakio.com.br/img/mastercard.jpg) center 0
+  background-size: cover
+  padding: $header-padding 0 0
+  color: white
+
+  h1, h2, h3, h4
+    font-weight: normal
+    color: white
+    margin-top: 0
+    text-shadow: 0px 1px 0 rgba(0, 0, 0, 0.3)
+
+  h1
+    margin-bottom: $header-padding
+    padding-left: 50px
+
+    $icon-color: #ccc
+    i
+      font-size: 9px
+      color: $icon-color
+
+  h4
+    padding-top: 10px
+    position: relative
+
+    .circled-icon
+      color: #aaa
+      border-color: #aaa
+      line-height: 1.3em
+
+      i
+        top: 1px
+
+  h4:before
+    content: ""
+    display: block
+    height: 1px
+    width: 1em
+    background: #aaa
+    position: absolute
+    top: 0
+    left: 0
+
+  p
+    color: #aaa
+
+  figure
+    float: left
+    position: relative
+
+    .organization
+      height: 18px
+      width: 18px
+      background: #FFF
+      border: 3px solid #444
+      border-radius: 50%
+      position: absolute
+      bottom: -4px
+      right: -4px
+      padding: 1px
+
+  .info
+    text-transform: uppercase
+    font-size: 0.75em
+    letter-spacing: 1px
+
+    span
+      display: inline-block
+      margin-right: 1em
+      font-weight: bold
+
+      i
+        font-size: 0.825em
+        color: $secondary-color
+
+  .label
+    background: #aaa
+    color: #3b3b3b
+    padding: 1px 3px
+    margin-left: 2px
+    border-radius: 2px
+    box-shadow: 0 1px 0px #222
+
+.at
+  color: #999
+  font-size: 0.75em
+
+#content
+  padding: $header-padding 0
+
+.actions
+  padding-top: 2px
+
+.button
+  padding-top: 0.5em // cancelling a weirdly higher padding-top in reimagine
+  background: none
+  border-radius: 3px
+  border: 1px solid
+
+  &:hover
+    background: none
+
+  &.primary
+    border: 2px solid $secondary-color
+    color: $secondary-color
+
+  $sec-color: lighten($primary-color, 6%)
+  &.secondary
+    background: none
+    border: 2px solid $sec-color
+    color: $sec-color
+
+    &:hover
+      background: none
+
+  &.more, &.small
+    border-color: #ccc
+    color: #ccc
+    font-weight: normal
+    font-size: 0.75em
+    padding: 4px 10px
+    margin-bottom: 0.5em
+
+    &:hover
+      color: white
+      border-color: white
+
+    .count
+      margin: -4px -10px
+      padding: 4px 6px
+      float: right
+      margin-left: 0.5em
+      border-left: 1px solid white
+      background: rgba(255, 255, 255, 0.15)
+
+    i
+      font-size: 0.825em
+
+  &.circled-icon
+    padding: 1px 4px
+    font-size: 0.625em
+    position: relative
+    top: -2px
+    line-height: 0.75em
+
+    i
+      position: relative
+
+.members
+  padding-top: 5px
+
+  li
+    float: left
+    margin:
+      right: 10px
+      bottom: 10px
+
+  $img-size: 30px
+  img
+    width: $img-size
+    height: $img-size
+    border-radius: 50%
+
+#user-avatar
+  height: 40px
+  width: 40px
+  border-radius: 50%
+  position: relative
+  top: 2px
+  // border: 2px solid $secondary-color
+
+$menu-border-size: 5px
+#menu
+  padding-top: $menu-border-size
+  border-top: 1px solid rgba(255, 255, 255, 0.1)
+
+  margin:
+    top: 1.2 * $header-padding
+    bottom: 0
+
+  li
+    float: left
+    margin-right: 1.5em
+
+    a
+      font-size: 0.825em
+      color: #aaa
+      display: block
+      padding: 0.5em 0.5em
+      border-bottom: $menu-border-size solid transparent
+      text-transform: uppercase
+
+      &.current
+        color: white
+        border-color: $body-bg-color
+
+        span
+          background: $secondary-color
+
+      &:hover
+        border-color: $body-bg-color
+
+      .label
+        position: relative
+        top: -1px
+
+.skills
+  li
+    float: left
+    font-size: 0.875em
+    color: #aaa
+    margin-right: 0.5em
+
+    &.main
+      color: #ddd
+
+  .label
+    float: right
+    top: 2px
+    font-size: 0.825em
+
+.block
+  background: #ccc
+  border-radius: 3px
+  height: 250px
+  margin-bottom: 25px
