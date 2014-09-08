@@ -1,0 +1,46 @@
+<% desc = local_assigns.fetch(:desc, nil) %>
+
+<div class="software-thumbnail">
+  <div class="software-details">
+    <figure style="background: url(<%= image_path(image) %>) center top; background-size: cover">
+    </figure>
+
+    <div class="description">
+      <h3><%= title %></h3>
+      <p class="tagline">
+        <% if desc %>
+          <%= desc %>
+        <% else %>
+        Season 7 is starting, keep up to date!
+        <br>
+        Episode summaries, news about the cast, and more!
+        <% end %>
+      </p>
+    </div>
+
+    <footer class="clearfix">
+      <div class="counts">
+        <span class="count view-count" data-count="view">
+          <i class="ss-icon ss-view"></i>
+          6
+        </span>
+
+        <span class="count like-count highlight" data-count="like">
+          <i class="ss-icon ss-heart"></i>
+          5
+        </span>
+
+        <span class="count comment-count" data-count="comment">
+          <i class="ss-icon ss-chat"></i>
+          0
+        </span>
+      </div>
+
+      <ul class="no-bullet members clearfix">
+        <li><img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/136/227/datas/profile.PNG?1403941599"></li>
+        <li><img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079"></li>
+        <li><img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/057/772/datas/profile.jpg?1367430882"></li>
+      </ul>
+    </footer>
+  </div>
+</div>

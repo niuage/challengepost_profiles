@@ -1,95 +1,16 @@
 <%= render "global_header" %>
 
 <div id="header" class="clearfix">
-  <div class="content-container">
-    <div class="clearfix">
-      <div class="large-9 columns">
-        <figure>
-          <img class="left" id="user-avatar" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079">
-          <img src="https://pbs.twimg.com/profile_images/293998663/CP_logo_blue_square_400x400.jpg" class="organization">
-        </figure>
-        <h1>
-          Robin Boutros<span class="at">,
-          working on CP Profiles right now
-          <a href="" class="round button small circled-icon"><i class="ss-icon ss-write"></i></a>
-          </span>
-        </h1>
-      </div>
-      <div class="large-3 columns">
-        <div class="actions">
-          <a href="#" class="primary button">Follow @niuage</a>
-          <a href="#" class="secondary button">Hire me</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="clearfix">
-      <div class="large-6 columns">
-        <h4>About</h4>
+    <%= render "username" %>
 
-        <div class="clearfix">
-          <div class="large-"></div>
-        </div>
+    <%= render "details" %>
 
-        <p>
-          I'm a Ruby on Rails developer at @ChallengePost.
-          <br>
-          I love designing and building user-facing features that make a difference.
-          I have a passion for webdesign and search technologies.
-        </p>
-        <p class="info">
-          <span class="occupation">
-            <i class="ss-icon ss-laptop"></i> Developer & Designer
-          </span>
-          <span class="location">
-            <i class="ss-icon ss-location"></i> New York, NY
-          </span>
-          <span class="website">
-            <i class="ss-icon ss-globe"></i>
-            hellorobin.com
-          </span>
-        </p>
-      </div>
-      <div class="large-3 columns">
-        <h4>Skills & interests <a class="round button more circled-icon" href=""><i class="ss-icon ss-write"></i></a></h4>
-        <ul class="no-bullet skills clearfix">
-          <li class="button small main">Ruby on Rails <span class="count">x12</span></li>
-          <li class="button small main">ElasticSearch <span class="count">x5</span></li>
-          <li class="button small">eSport <span class="count">x2</span></li>
-        </ul>
-
-        <a class="round button more" href="">View all</a>
-      </div>
-      <div class="large-3 columns">
-        <h4>Active followers</h4>
-        <ul class="no-bullet members clearfix">
-          <li><img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/136/227/datas/profile.PNG?1403941599"></li>
-          <li><img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079"></li>
-          <li><img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/057/772/datas/profile.jpg?1367430882"></li>
-          <li><img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/134/001/datas/profile.jpg?1401684770"></li>
-          <li><img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/152/959/datas/profile.jpg?1409951854"></li>
-          <li><img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/015/972/datas/profile.jpg?1301079533"></li>
-          <li><img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/134/001/datas/profile.jpg?1401684770"></li>
-        </ul>
-
-        <a class="round button more" href="">View all</a>
-      </div>
-    </div>
-
-    <div class="small-12 columns">
-      <ul class="no-bullet" id="menu">
-        <li><a href="#">Overview</a></li>
-          <li><a href="#" class="current">My projects <span class="label">17</span></a></li>
-          <li><a href="#">My Likes <span class="label">42</span></a></li>
-          <li class="right"><a href="#">Following <span class="label">51</span></a></li>
-          <li class="right"><a href="#">Followers <span class="label">83</span></a></li>
-          <li><a href="#">Entered challenges</a></li>
-        </li>
-      </ul>
-    </div>
-  </div>
+    <%= render "menu" %>
 </div>
 
-<div id="content">
+<div id="content" class="clearfix">
   <%= render "content" %>
 </div>
+
+<%= render "footer" %>

@@ -1,27 +1,44 @@
-<div class="content-container">
-    <div>
-      <div class="small-6 columns">
-        <div class="block"></div>
-      </div>
-      <div class="small-3 columns">
-        <div class="block"></div>
-      </div>
-      <div class="small-3 columns">
-        <div class="block"></div>
-      </div>
+<%
+apps = [
+  {
+    title: "Sons of Anarchy App",
+    image: "soa.jpg"
+  },
+  {
+    title: "FaceTune",
+    image: "ggplay2.png",
+    desc: "Facetune is a fun and powerful portrait & selfie photo editor!"
+  },
+  {
+    title: "StarSucks",
+    image: "gg6.png",
+    desc: "A Starbucks Card is the fastest, most convenient way to pay at Starbucks. lol."
+  },
+  {
+    title: "Reddit now",
+    image: "ggplay4.png",
+    desc: "Reddit Now is a great way to browse content published on Reddit"
+  },
+  {
+    title: "Angry Birds",
+    image: "gg5.png",
+    desc: "Join Stella and her super adventurous friends on a quest to protect Golden Island."
+  }
+]
+%>
+
+<div class="row">
+  <div class="large-6 columns">
+    <%= render "software_thumbnail", title: apps[0][:title], image: apps[0][:image], desc: apps[0][:desc] %>
+  </div>
+  <% apps.slice(1, 2).each do |s| %>
+    <div class="large-3 columns">
+      <%= render "software_thumbnail", title: s[:title], image: s[:image], desc: s[:desc] %>
     </div>
-    <div>
-      <div class="small-3 columns">
-        <div class="block"></div>
-      </div>
-      <div class="small-3 columns">
-        <div class="block"></div>
-      </div>
-      <div class="small-3 columns">
-        <div class="block"></div>
-      </div>
-      <div class="small-3 columns">
-        <div class="block"></div>
-      </div>
+  <% end %>
+  <% apps.slice(1, 4).each do |s| %>
+    <div class="large-3 columns">
+      <%= render "software_thumbnail", title: s[:title], image: s[:image], desc: s[:desc] %>
     </div>
+  <% end %>
 </div>
