@@ -1,0 +1,27 @@
+<% comment ||= nil %>
+
+<div class="comment-thumbnail thumbnail">
+
+  <%= link_to "#" do %>
+    <div class="description">
+      <p class="tagline">
+        <% if comment %>
+          <%= comment %>
+        <% else %>
+          Oh my god, I use your Elevator app all. the. time!
+          <br>
+          Like, I basically live in it. That's how much I use it.
+        <% end %>
+      </p>
+    </div>
+  <% end %>
+
+  <footer class="clearfix">
+    <ul class="no-bullet members clearfix">
+      <li>
+        <img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079">
+        Berman
+      </li>
+    </ul>
+  </footer>
+</div>

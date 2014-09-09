@@ -1,0 +1,145 @@
+<%
+apps = [
+  {
+    title: "Sons of Anarchy App",
+    image: "soa.jpg"
+  },
+  {
+    title: "FaceTune",
+    image: "ggplay2.png",
+    desc: "Facetune is a fun and powerful portrait & selfie photo editor! Facetune is a fun and powerful portrait & selfie photo editor!"
+  },
+  {
+    title: "StarSucks",
+    image: "gg6.png",
+    desc: "A Starbucks Card is the fastest, most convenient way to pay at Starbucks. lol."
+  },
+  {
+    title: "Reddit now",
+    image: "ggplay4.png",
+    desc: "Reddit Now is a great way to browse content published on Reddit Reddit Now is a great way to browse content published on Reddit"
+  },
+  {
+    title: "Angry Birds",
+    image: "gg5.png",
+    desc: "Join Stella and her super adventurous friends on a quest to protect Golden Island."
+  },
+  {
+    title: "Ivysaur",
+    image: "midu.png",
+    desc: "Ivysaur is a dinosaur-like, quadruped Pokémon. It has blue-green skin with darker patches. Two pointed teeth protrude from its upper jaw, and it has narrow red to purple eyes."
+  }
+]
+%>
+
+<div class="row">
+
+  <div class="large-9 columns">
+    <div class="feed">
+      <div class="timestamp">
+        <div class="icon"><i class="ss-icon ss-clock"></i></div>
+        Today
+      </div>
+      <div class="activity">
+        <div class="event like-event">
+          <i class="ss-icon ss-heart"></i>
+        </div>
+
+        <p class="title"><b>Robin Boutros</b> liked 3 projects.</p>
+
+        <div class="row software-row">
+          <div class="large-4 columns">
+            <%= render "software_thumbnail", apps[0] %>
+          </div>
+          <div class="large-4 columns">
+            <%= render "software_thumbnail", apps[2] %>
+          </div>
+          <div class="large-4 columns">
+            <%= render "software_thumbnail", apps[4] %>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="event new-project-event">
+          <i class="ss-icon ss-laptop"></i>
+        </div>
+
+        <p class="title"><b>Stefano Billiebeni</b> added a new project!</p>
+
+        <div class="row software-row">
+          <div class="large-8 columns">
+            <%= render "software_thumbnail", apps[5] %>
+          </div>
+          <div class="large-4 columns">
+            <div class="section">
+              <%= link_to projects_path, class: "button secondary with-icon with-text" do %>
+                <i class="ss-icon ss-repeat"></i> Leave feedback
+              <% end %>
+              <%= link_to projects_path, class: "button secondary with-icon like" do %>
+                <i class="ss-icon ss-heart"></i>
+              <% end %>
+            </div>
+            <div class="">
+              <p>
+                <i>
+                  <i class="ss-icon ss-quote"></i><br>
+                  I used the Pokemon API for this app.
+                It's really well documented and fun to use!</i>
+              </p>
+              <h5>
+                &mdash;
+
+                Stefano
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timestamp">
+        <div class="icon"><i class="ss-icon ss-clock"></i></div>
+        2 days ago
+      </div>
+
+      <div class="activity">
+        <div class="event new-comment-event">
+          <i class="ss-icon ss-chat"></i>
+        </div>
+
+        <p class="title"><b>Berman</b> left a comment on your sofware <b><%= link_to "Elevator", projects_path %></b>.</p>
+
+        <div class="row software-row">
+          <div class="large-8 columns">
+            <%= render "comment" %>
+          </div>
+          <div class="large-4 columns">
+            <%= link_to "Answer Berman!", "#", class: "button secondary" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="timestamp">
+        <div class="icon"><i class="ss-icon ss-clock"></i></div>
+        July 20, 2014
+      </div>
+
+      <div class="activity">
+        <div class="event new-comment-event">
+          <i class="ss-icon ss-chat"></i>
+        </div>
+
+        <p class="title"><b>You</b> left a comment on your own sofware <b><%= link_to "PoExplorer", projects_path %></b>.</p>
+
+        <div class="row software-row">
+          <div class="large-8 columns">
+            <%= render "comment", comment: "You should be ashamed of yourself." %>
+          </div>
+          <div class="large-4 columns">
+            <%= link_to "Do not answer", "#", class: "button secondary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

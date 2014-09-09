@@ -1,8 +1,8 @@
 <% desc = local_assigns.fetch(:desc, nil) %>
 
-<div class="software-thumbnail">
+<div class="software-thumbnail thumbnail">
 
-  <a href="#">
+  <%= link_to projects_path do %>
     <figure style="background: url(<%= image_path(image) %>) center top; background-size: cover">
     </figure>
 
@@ -18,7 +18,7 @@
         <% end %>
       </p>
     </div>
-  </a>
+  <% end %>
 
   <footer class="clearfix">
     <div class="counts">
