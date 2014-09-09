@@ -278,9 +278,9 @@ $light-border: 1px solid rgba(255, 255, 255, 0.2)
     border-radius: 0 0 3px 3px
     background: white
     position: relative
-    // box-shadow: 0 1px 0 #ccc
+    border-bottom: 1px solid #d2d2d2
 
-    &:after
+    &:after, &:before
       content: ""
       display: block
       position: absolute
@@ -290,6 +290,14 @@ $light-border: 1px solid rgba(255, 255, 255, 0.2)
       width: 0
       border: 8px solid transparent
       border-top-color: white
+      z-index: 10
+
+    &:before
+      z-index: 9
+      border-top-color: #d2d2d2
+      border-width: 9px
+      bottom: -18px
+      left: 9px
 
     h3
       margin: 0.6875em 0 0.1em
