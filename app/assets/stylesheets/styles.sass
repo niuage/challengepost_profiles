@@ -243,6 +243,10 @@ $light-border: 1px solid rgba(255, 255, 255, 0.2)
         position: relative
         top: -1px
 
+#following-menu
+  li
+    margin-right: 1.0em
+
 .skills
   li
     float: left
@@ -258,27 +262,44 @@ $light-border: 1px solid rgba(255, 255, 255, 0.2)
     top: 2px
     font-size: 0.825em
 
+$software-details-padding: 0.3em
+$software-details-bg-color: #ddd
+$desc-shadow-color: #d2d2d2
 .software-thumbnail
   margin-bottom: 0.9375em * 2
+  padding: $software-details-padding
+  border-radius: 3px
+  background-color: $software-details-bg-color
+  @include transition(background-color 0.3s ease-in)
 
-  $software-details-padding: 0.3em
-  $software-details-bg-color: #ddd
-  .software-details
-    padding: $software-details-padding
-    border-radius: 3px
-    background: $software-details-bg-color
-    margin-bottom: 0.5em
+  &:hover
+    background-color: darken($software-details-bg-color, 4%)
 
-    figure
-      border-radius: 3px 3px 0 0
-      height: 200px
+    .description
+      border-bottom-color: darken($desc-shadow-color, 4%)
+
+      &:before
+        border-top-color: darken($desc-shadow-color, 4%)
+
+  figure
+    border-radius: 3px 3px 0 0
+    height: 200px
+
+  a
+    outline: none
+    color: $grey-5
+
+    &:hover
+      h3
+        color: $primary-color
 
   .description
     padding: 1px 1em
     border-radius: 0 0 3px 3px
     background: white
     position: relative
-    border-bottom: 1px solid #d2d2d2
+    border-bottom: 1px solid $desc-shadow-color
+    @include transition(border-color 0.3s ease-in)
 
     &:after, &:before
       content: ""
@@ -294,7 +315,7 @@ $light-border: 1px solid rgba(255, 255, 255, 0.2)
 
     &:before
       z-index: 9
-      border-top-color: #d2d2d2
+      border-top-color: $desc-shadow-color
       border-width: 9px
       bottom: -18px
       left: 9px
@@ -356,6 +377,18 @@ $light-border: 1px solid rgba(255, 255, 255, 0.2)
 
   .button
     margin: 0
+
+.button
+  &.with-icon
+    i
+      font-size: 0.75em
+
+    &.with-text
+      padding-right: 1.0em
+
+      i
+        position: relative
+        left: -2px
 
 .row
   max-width: 80em
