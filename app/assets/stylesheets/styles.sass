@@ -75,10 +75,14 @@ body, html
     font-size: 0.75em
     letter-spacing: 1px
 
-    span
+    a
       display: inline-block
       margin-right: 1em
       font-weight: bold
+      color: #ccc
+
+      &:hover
+        color: white
 
       i
         font-size: 0.825em
@@ -188,8 +192,11 @@ $menu-border-size: 0.4em
 $light-border: 1px solid rgba(255, 255, 255, 0.2)
 #menu
   ul
-    border-top: $light-border
     position: relative
+    margin-bottom: 0
+
+    @media #{$small}
+      border-top: $light-border
 
     &:before
       content: ""
@@ -217,7 +224,7 @@ $light-border: 1px solid rgba(255, 255, 255, 0.2)
       padding: 1em 0 0.6em 0
       text-transform: uppercase
       border-bottom: $light-border
-      border-width: 0 0 $menu-border-size / 2
+      border-width: 0 0 1px
 
       &.current
         color: white
