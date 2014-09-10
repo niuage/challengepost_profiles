@@ -36,106 +36,103 @@ apps = [
 
   <div class="large-9 columns">
     <div class="feed">
-      <div class="timestamp">
-        <div class="icon"><i class="ss-icon ss-clock"></i></div>
-        <span class="time">Today, Sep 9 2014</span>
+      <%= render "home/feed/timestamp", time: "Today, July 9 2014" %>
+
+      <div class="row activity">
+        <div class="large-4 columns">
+          <div class="activity-sidebar">
+            <%= render "home/feed/new_software/actions" %>
+          </div>
+        </div>
+        <div class="large-8 columns">
+          <div class="activity-content">
+            <p class="title">
+              <span class="event new-project-event"><i class="ss-icon ss-laptop"></i></span>
+
+              <b>Stefano Billiebeni</b> added a new project,
+              <%= link_to "Ivysaur", projects_path %>!
+            </p>
+
+            <div class="row software-row">
+              <div class="large-12 columns">
+                <%= render "software_thumbnail", apps[5] %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="activity">
-        <div class="event new-project-event">
-          <i class="ss-icon ss-laptop"></i>
-        </div>
+      <div class="row activity">
+        <div class="large-4 columns">
+          <div class="activity-sidebar">
 
-        <p class="title"><b>Stefano Billiebeni</b> added a new project, <%= link_to "Ivysaur", projects_path %>!</p>
-
-        <div class="row software-row">
-          <div class="large-8 columns">
-            <%= render "software_thumbnail", apps[5] %>
           </div>
-          <div class="large-4 columns">
+        </div>
+        <div class="large-8 columns">
+          <div class="activity-content">
+            <p class="title">
+              <span class="event like-event"><i class="ss-icon ss-heart"></i></span>
+
+              <img class="user-avatar" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079">
+              <b>Rob Bout</b> liked 3 projects.
+            </p>
+
+
+            <div class="row software-row">
+              <div class="large-12 columns">
+                <%= render "software_thumbnail", apps[0] %>
+              </div>
+              <div class="large-6 columns">
+                <%= render "software_thumbnail", apps[2] %>
+              </div>
+              <div class="large-6 columns">
+                <%= render "software_thumbnail", apps[4] %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%= render "home/feed/timestamp", time: "2 days ago" %>
+
+      <div class="row activity">
+        <div class="large-4 columns">
+          <div class="activity-sidebar">
             <div class="section">
-              <%= link_to projects_path, class: "button secondary with-icon with-text" do %>
-                <i class="ss-icon ss-repeat"></i> Leave feedback
-              <% end %>
-              <%= link_to projects_path, class: "button secondary with-icon like" do %>
-                <i class="ss-icon ss-heart"></i>
-              <% end %>
-            </div>
-            <div class="">
-              <p>
-                <i>
-                  <i class="ss-icon ss-quote"></i><br>
-                  I used the Pokemon API for this app.
-                It's really well documented and fun to use!</i>
-              </p>
-              <p>
-                &mdash; Stefano
-              </p>
+              <%= link_to "Answer Berman", "#", class: "button secondary" %>
             </div>
           </div>
         </div>
-      </div>
+        <div class="large-8 columns">
+          <div class="activity-content">
+            <p class="title">
+              <span class="event new-comment-event"><i class="ss-icon ss-chat"></i></span>
+              <b>Berman</b> left a comment on your sofware <b><%= link_to "Elevator", projects_path %></b>.
+            </p>
 
-      <div class="activity">
-        <div class="event like-event">
-          <i class="ss-icon ss-heart"></i>
-        </div>
-
-        <p class="title"><img class="user-avatar" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079"> <b>Rob Bout</b> liked 3 projects.</p>
-
-        <div class="row software-row">
-          <div class="large-4 columns">
-            <%= render "software_thumbnail", apps[0] %>
-          </div>
-          <div class="large-4 columns">
-            <%= render "software_thumbnail", apps[2] %>
-          </div>
-          <div class="large-4 columns">
-            <%= render "software_thumbnail", apps[4] %>
-          </div>
-        </div>
-      </div>
-
-      <div class="timestamp">
-        <div class="icon"><i class="ss-icon ss-clock"></i></div>
-        <span class="time">2 days ago</span>
-      </div>
-
-      <div class="activity">
-        <div class="event new-comment-event">
-          <i class="ss-icon ss-chat"></i>
-        </div>
-
-        <p class="title"><b>Berman</b> left a comment on your sofware <b><%= link_to "Elevator", projects_path %></b>.</p>
-
-        <div class="row software-row">
-          <div class="large-8 columns">
             <%= render "comment" %>
           </div>
-          <div class="large-4 columns">
-            <%= link_to "Answer Berman", "#", class: "button secondary" %>
-          </div>
         </div>
       </div>
 
-      <div class="timestamp">
-        <div class="icon"><i class="ss-icon ss-clock"></i></div>
-        <span class="time">July 20, 2014</span>
-      </div>
+      <%= render "home/feed/timestamp", time: "July 1st 2014" %>
 
-      <div class="activity">
-        <div class="event new-comment-event">
-          <i class="ss-icon ss-chat"></i>
-        </div>
-
-        <p class="title"><b>You</b> left a comment on your own sofware <b><%= link_to "PoExplorer", projects_path %></b>.</p>
-
-        <div class="row software-row">
-          <div class="large-8 columns">
-            <%= render "comment", comment: "And go like your own software too, why don't you?" %>
+      <div class="row activity">
+        <div class="large-4 columns">
+          <div class="activity-sidebar">
+            <div class="section">
+              <%= link_to "Answer Rob Bout", "#", class: "button secondary" %>
+            </div>
           </div>
-          <div class="large-4 columns">
-            <%= link_to "Do not answer", "#", class: "button secondary" %>
+        </div>
+        <div class="large-8 columns">
+          <div class="activity-content">
+            <p class="title">
+              <span class="event new-comment-event"><i class="ss-icon ss-chat"></i></span>
+              <b>You</b> left a comment on your own sofware <b><%= link_to "PoExplorer", projects_path %></b>.
+            </p>
+
+            <%= render "comment", comment: "And go like your own software too, why don't you?", author: "Rob Bout" %>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 <% comment ||= nil %>
-
+<% author ||= "Berman" %>
 <div class="comment-thumbnail thumbnail">
 
   <%= link_to "#" do %>
@@ -20,7 +20,7 @@
     <ul class="no-bullet members clearfix">
       <li>
         <img src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079">
-        Berman
+        <%= author %>
       </li>
     </ul>
   </footer>
