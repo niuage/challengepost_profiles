@@ -40,25 +40,6 @@ apps = [
         <div class="icon"><i class="ss-icon ss-clock"></i></div>
         <span class="time">Today, Sep 9 2014</span>
       </div>
-      <div class="activity">
-        <div class="event like-event">
-          <i class="ss-icon ss-heart"></i>
-        </div>
-
-        <p class="title"><img class="user-avatar" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079"> <b>Rob Bout</b> liked 3 projects.</p>
-
-        <div class="row software-row">
-          <div class="large-4 columns">
-            <%= render "software_thumbnail", apps[0] %>
-          </div>
-          <div class="large-4 columns">
-            <%= render "software_thumbnail", apps[2] %>
-          </div>
-          <div class="large-4 columns">
-            <%= render "software_thumbnail", apps[4] %>
-          </div>
-        </div>
-      </div>
 
       <div class="activity">
         <div class="event new-project-event">
@@ -91,6 +72,26 @@ apps = [
                 &mdash; Stefano
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="event like-event">
+          <i class="ss-icon ss-heart"></i>
+        </div>
+
+        <p class="title"><img class="user-avatar" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079"> <b>Rob Bout</b> liked 3 projects.</p>
+
+        <div class="row software-row">
+          <div class="large-4 columns">
+            <%= render "software_thumbnail", apps[0] %>
+          </div>
+          <div class="large-4 columns">
+            <%= render "software_thumbnail", apps[2] %>
+          </div>
+          <div class="large-4 columns">
+            <%= render "software_thumbnail", apps[4] %>
           </div>
         </div>
       </div>
