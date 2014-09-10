@@ -106,15 +106,18 @@ body, html
   background: none
   border-radius: 3px
   border: 1px solid
+  border-color: #ccc
+  color: #ccc
 
   &:hover
     background: none
+    color: white
+    border-color: white
 
   &.primary
     border: 2px solid $secondary-color
     color: $secondary-color
 
-  // lighten($primary-color, 6%)
   $sec-color: #3ABB92
   &.secondary
     background: none
@@ -128,17 +131,11 @@ body, html
     border: 2px solid #d73e78
     color: #d73e78
 
-  &.more, &.small
-    border-color: #ccc
-    color: #ccc
+  &.more, &.small, &.medium
     font-weight: normal
     font-size: 0.75em
     padding: 4px 10px
     margin-bottom: 0.5em
-
-    &:hover
-      color: white
-      border-color: white
 
     .count
       margin: -4px -10px
@@ -154,6 +151,9 @@ body, html
 
     i
       font-size: 0.825em
+
+  &.medium
+    font-size: 0.825em
 
   &.circled-icon
     padding: 1px 4px
