@@ -32,19 +32,20 @@ apps = [
 ]
 %>
 
+<%
+  large = "large-9 push-3"
+  small = "large-3 pull-9"
+ %>
+
 <div class="row">
 
   <div class="large-9 columns">
+
     <div class="feed">
       <%= render "home/feed/timestamp", time: "Today, July 9 2014" %>
 
       <div class="row activity">
-        <div class="large-4 columns">
-          <div class="activity-sidebar">
-            <%= render "home/feed/new_software/actions" %>
-          </div>
-        </div>
-        <div class="large-8 columns">
+        <div class="<%= large %> columns">
           <div class="activity-content">
             <p class="title">
               <span class="event new-project-event"><i class="ss-icon ss-laptop"></i></span>
@@ -55,21 +56,32 @@ apps = [
             </p>
 
             <div class="row software-row">
-              <div class="large-12 columns">
+              <div class="large-8 columns">
                 <%= render "software_thumbnail", apps[5] %>
               </div>
+              <div class="large-4 columns">
+                <blockquote cite="http://url-of-the-software.com#quote-anchor">
+                  <p>
+                    I used the Pokemon API for this app.
+                    It's really well documented and fun to use!
+                  </p>
+                  <p>
+                    &mdash; Stefano
+                  </p>
+                </blockquote>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="<%= small %> columns">
+          <div class="activity-sidebar">
+            <%= render "home/feed/new_software/actions" %>
           </div>
         </div>
       </div>
 
       <div class="row activity">
-        <div class="large-4 columns">
-          <div class="activity-sidebar">
-
-          </div>
-        </div>
-        <div class="large-8 columns">
+        <div class="<%= large %> columns">
           <div class="activity-content">
             <p class="title">
               <span class="event like-event"><i class="ss-icon ss-heart"></i></span>
@@ -92,19 +104,17 @@ apps = [
             </div>
           </div>
         </div>
+        <div class="<%= small %> columns">
+          <div class="activity-sidebar">
+
+          </div>
+        </div>
       </div>
 
       <%= render "home/feed/timestamp", time: "2 days ago" %>
 
       <div class="row activity">
-        <div class="large-4 columns">
-          <div class="activity-sidebar">
-            <div class="section">
-              <%= link_to "Answer Berman", "#", class: "button medium secondary" %>
-            </div>
-          </div>
-        </div>
-        <div class="large-8 columns">
+        <div class="<%= large %> columns">
           <div class="activity-content">
             <p class="title">
               <span class="event new-comment-event"><i class="ss-icon ss-chat"></i></span>
@@ -116,19 +126,19 @@ apps = [
             <%= render "comment" %>
           </div>
         </div>
+        <div class="<%= small %> columns">
+          <div class="activity-sidebar">
+            <div class="section">
+              <%= link_to "Answer", "#", class: "button medium secondary" %>
+            </div>
+          </div>
+        </div>
       </div>
 
       <%= render "home/feed/timestamp", time: "July 1st 2014" %>
 
       <div class="row activity">
-        <div class="large-4 columns">
-          <div class="activity-sidebar">
-            <div class="section">
-              <%= link_to "Answer Rob Bout", "#", class: "button medium secondary" %>
-            </div>
-          </div>
-        </div>
-        <div class="large-8 columns">
+        <div class="<%= large %> columns">
           <div class="activity-content">
             <p class="title">
               <span class="event new-comment-event"><i class="ss-icon ss-chat"></i></span>
@@ -140,7 +150,28 @@ apps = [
             <%= render "comment", comment: "And go like your own software too, why don't you?", author: "Rob Bout" %>
           </div>
         </div>
+        <div class="<%= small %> columns">
+          <div class="activity-sidebar">
+            <div class="section">
+              <%= link_to "Answer", "#", class: "button medium secondary" %>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <div class="large-3 columns">
+    <h2>Reputation</h2>
+
+    <div class="badges">
+      <ul class="no-bullet">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
   </div>
 </div>

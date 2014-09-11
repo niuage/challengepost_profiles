@@ -262,7 +262,6 @@ $light-border: 1px solid rgba(255, 255, 255, 0.2)
     top: 2px
     font-size: 0.825em
 
-$software-details-bg-color: #ddd
 $desc-shadow-color: #d2d2d2
 .software-thumbnail, .thumbnail
   margin-bottom: 0.9375em * 2
@@ -409,3 +408,19 @@ $desc-shadow-color: #d2d2d2
   .description
     border-radius: 3px
     padding-top: 1.0em
+
+h2
+  font-weight: normal
+  // border-bottom: 2px solid #ddd
+  position: relative
+  margin-bottom: 1em
+
+  &:after
+    content: ""
+    height: 2px
+    width: 1em
+    display: block
+    position: absolute
+    bottom: -2px
+    left: 0
+    background: black
