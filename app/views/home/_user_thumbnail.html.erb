@@ -1,6 +1,7 @@
 <% desc = local_assigns.fetch(:desc, "I hate Britney.") %>
 <% user ||= "Justin Timberlol" %>
 <% image ||= "justincover.png" %>
+<% avatar ||= "justinavatar.png" %>
 
 <div class="user-thumbnail thumbnail">
   <%= link_to "#", class: "button small round secondary" do %>
@@ -12,8 +13,12 @@
     </figure>
 
     <div class="description">
-      <img class="user-avatar large" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079">
-      <h3><%= user %> <span>WIIIIIP</span></h3>
+      <%= image_tag avatar, class: "user-avatar large" %>
+      <h3><%= user %></h3>
+      <p class="info">
+        <span><i class="ss-icon ss-laptop"></i> Dev & Designer</span> &middot;
+        <span><i class="ss-icon ss-location"></i> New York, NY</span>
+      </p>
       <p class="tagline">
         <%= desc %>
       </p>
@@ -23,15 +28,11 @@
   <footer class="clearfix">
     <div class="counts">
       <span class="count view-count" data-count="view">
-        <i class="ss-icon ss-view"></i> 6
+        <i class="ss-icon ss-laptop"></i> 6 Projects
       </span>
 
       <span class="count like-count highlight" data-count="like">
-        <i class="ss-icon ss-heart"></i> 5
-      </span>
-
-      <span class="count comment-count" data-count="comment">
-        <i class="ss-icon ss-chat"></i> 0
+        <i class="ss-icon ss-users"></i> 14 followers
       </span>
     </div>
   </footer>

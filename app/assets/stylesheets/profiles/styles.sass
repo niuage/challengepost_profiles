@@ -454,9 +454,21 @@ h2
     border: 3px solid white
 
   .description
+    &:after, &:before
+      content: none
+
     .tagline
       height: auto
 
-  h3
-    span
-      color: $grey-2
+  p.info
+    text-transform: uppercase
+    font-size: 0.6875em
+    color: $grey-3
+
+    i
+      font-size: 0.825em
+
+  footer
+    padding: 0.3em
+    .counts
+      float: none
