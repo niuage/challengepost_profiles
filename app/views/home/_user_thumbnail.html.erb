@@ -3,7 +3,9 @@
 <% image ||= "justincover.png" %>
 
 <div class="user-thumbnail thumbnail">
-  <%= link_to "Follow", "#", class: "button small secondary" %>
+  <%= link_to "#", class: "button small round secondary" do %>
+    <i class="ss-icon ss-plus"></i>
+  <% end %>
 
   <%= link_to "#" do %>
     <figure style="background: url(<%= image_path(image) %>) center top; background-size: cover">
