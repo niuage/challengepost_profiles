@@ -1,0 +1,36 @@
+<% desc = local_assigns.fetch(:desc, "I hate Britney.") %>
+<% user ||= "Justin Timberlol" %>
+<% image ||= "justincover.png" %>
+
+<div class="user-thumbnail thumbnail">
+  <%= link_to "Follow", "#", class: "button small secondary" %>
+
+  <%= link_to "#" do %>
+    <figure style="background: url(<%= image_path(image) %>) center top; background-size: cover">
+    </figure>
+
+    <div class="description">
+      <img class="user-avatar large" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079">
+      <h3><%= user %> <span>WIIIIIP</span></h3>
+      <p class="tagline">
+        <%= desc %>
+      </p>
+    </div>
+  <% end %>
+
+  <footer class="clearfix">
+    <div class="counts">
+      <span class="count view-count" data-count="view">
+        <i class="ss-icon ss-view"></i> 6
+      </span>
+
+      <span class="count like-count highlight" data-count="like">
+        <i class="ss-icon ss-heart"></i> 5
+      </span>
+
+      <span class="count comment-count" data-count="comment">
+        <i class="ss-icon ss-chat"></i> 0
+      </span>
+    </div>
+  </footer>
+</div>
