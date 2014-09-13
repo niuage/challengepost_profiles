@@ -1,0 +1,8 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "v2/styles" %>
+<% end %>
+
+<%= render layout: "layouts/application" do %>
+
+  <%= yield %>
+<% end %>

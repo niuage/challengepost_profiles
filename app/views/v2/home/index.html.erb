@@ -1,11 +1,14 @@
 <div id="header" class="clearfix">
-    <%= render "username" %>
-    <%= render "details" %>
-    <%= render "menu" %>
+  <%= render "slim_header" %>
 </div>
+
+<%= render "menu" %>
+
+<%= render "user_intro" %>
 
 <div id="content" class="clearfix">
   <%= render "content" %>
+  <%= render "overview" %>
 </div>
 
 <%= render "footer" %>
