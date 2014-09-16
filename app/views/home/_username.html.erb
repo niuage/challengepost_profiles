@@ -1,17 +1,24 @@
 <div class="row">
   <div class="large-9 columns">
+    <div class="right">
+    <%= render "actions" %>
+    </div>
+
     <figure>
       <img class="left" id="user-avatar" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079">
       <img src="https://pbs.twimg.com/profile_images/293998663/CP_logo_blue_square_400x400.jpg" class="organization">
     </figure>
     <h1>
-      Robin Boutros<span class="at">,
-      working on CP Profiles right now
-      <a href="" class="round button small circled-icon"><i class="ss-icon ss-write"></i></a>
-      </span>
+      Robin Boutros
+      <% if false %>
+        <span class="at">
+          &middot; Working on CP Profiles right now!
+          <a href="" class="round button small circled-icon"><i class="ss-icon ss-write"></i></a>
+        </span>
+      <% end %>
     </h1>
   </div>
   <div class="large-3 columns">
-    <%= render "actions" %>
+
   </div>
 </div>
