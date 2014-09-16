@@ -1,11 +1,13 @@
-<div id="header" class="clearfix">
-    <%= render "username" %>
-    <%= render "details" %>
-    <%= render "menu" %>
-</div>
+<ul>
+  <li>
+    <%= link_to "V1", v1_root_path %>
+  </li>
 
-<div id="content" class="clearfix">
-  <%= render "overview" %>
-</div>
+  <li>
+    <%= link_to "V2 - trying a simplified header", v2_root_path %>
+  </li>
 
-<%= render "footer" %>
+  <li>
+    <%= link_to "V3 - [WIP] back to original header, but a bit simplified + new feed ideas", v3_root_path %>
+  </li>
+</ul>
