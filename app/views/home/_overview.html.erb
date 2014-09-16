@@ -40,6 +40,19 @@ apps = [
 <div class="row">
   <div class="large-9 columns">
     <div class="feed">
+
+      <div class="row activity">
+
+        <div class="<%= large %> columns">
+          <div class="activity-content">
+            <%= render "home/feed/add" %>
+          </div>
+        </div>
+
+        <div class="<%= small %> columns">
+        </div>
+      </div>
+
       <%= render "home/feed/timestamp", time: "Today, July 9 2014" %>
 
       <div class="row activity">

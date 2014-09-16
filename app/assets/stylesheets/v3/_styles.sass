@@ -1,11 +1,74 @@
+$blue-ish-color: #A7B0C7
+
 #v3
-  #header
-    h1
-      padding-left: 0
+  // .activity-content
+  //   padding-left: 2em
 
-  #user-avatar
-    width: 100%
-    height: 100%
+.app
+  background: white
+  padding: 10px
+  border-radius: 3px
+  float: left
+  margin-right: $software-details-padding
 
-  .activity-content
-    padding-left: 2em
+  .caption
+    float: left
+    padding: 1px 10px
+
+    p, h3
+      margin: 0
+      text-transform: uppercase
+      font-size: 0.825em
+
+    p
+      font-size: 0.6875em
+      color: $grey-4
+
+
+.browser
+  border: 2px solid #dedede
+  border-radius: 2px
+  width: 40px
+  float: left
+
+  .ui-content
+    padding: 2px
+    margin-bottom: -2px
+
+    .ui-block, .ui-line
+      background: #eee
+      margin-bottom: 4px
+
+      &.dashed
+        border: 1px dashed #BBCCE5
+        background: #f2f2f2
+
+    .ui-block
+      height: 10px
+
+    .ui-line
+      height: 4px
+      margin-bottom: 2px
+
+  .ui-header
+    background: #dedede
+    height: 7px
+
+    ul
+      margin: 0
+
+      li
+        float: left
+        height: 3px
+        width: 3px
+        margin: 1px 0 0 2px
+        border-radius: 100%
+
+      .close
+        background: #f15954
+
+      .minimize
+        background: #EBC06D
+
+      .expand
+        background: #84b862
