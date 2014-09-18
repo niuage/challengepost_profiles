@@ -1,0 +1,30 @@
+<div class="row activity">
+  <div class="<%= large %> columns">
+    <div class="activity-content">
+      <p class="title">
+        <span class="event new-follow-event"><i class="ss-icon ss-users"></i></span>
+
+        <img class="user-avatar" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079">
+        <b>Rob Bout</b> is now following
+        <%= link_to "Justin Timberlol", "#" %> and <%= link_to "Britney Spears", "#" %>!
+      </p>
+
+      <div class="row">
+        <div class="large-4 columns">
+          <%= render "user_thumbnail" %>
+        </div>
+        <div class="large-4 columns">
+          <%= render "user_thumbnail", user: "Britney Spears", desc: "Oh, cry me a river...", image: "britneycover.png", avatar: "britavatar.png" %>
+        </div>
+        <div class="columns"></div>
+      </div>
+    </div>
+  </div>
+  <div class="<%= small %> columns">
+    <div class="activity-sidebar">
+      <div class="section">
+        <%= link_to "Find similar hackers", "#", class: "button medium secondary" %>
+      </div>
+    </div>
+  </div>
+</div>

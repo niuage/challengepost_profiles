@@ -1,0 +1,36 @@
+<div class="row activity">
+  <div class="<%= large %> columns">
+    <div class="activity-content">
+      <p class="title">
+        <span class="event new-project-event"><i class="ss-icon ss-laptop"></i></span>
+
+        <img class="user-avatar" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/134/001/datas/profile.jpg?1401684770">
+        <b>Stefano Billiebeni</b> added a new project,
+        <%= link_to "Ivysaur", projects_path %>!
+      </p>
+
+      <div class="row software-row">
+        <div class="large-4 columns">
+          <%= render "software_thumbnail", apps[5] %>
+        </div>
+        <div class="large-4 columns">
+          <blockquote cite="http://url-of-the-software.com#quote-anchor">
+            <p>
+              I used the Pokemon API for this app.
+              It's really well documented and fun to use!
+            </p>
+            <p>
+              &mdash; Stefano
+            </p>
+          </blockquote>
+        </div>
+        <div class="columns"></div>
+      </div>
+    </div>
+  </div>
+  <div class="<%= small %> columns">
+    <div class="activity-sidebar">
+      <%= render "home/feed/new_software/actions" %>
+    </div>
+  </div>
+</div>

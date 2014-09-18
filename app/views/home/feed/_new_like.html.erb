@@ -1,0 +1,36 @@
+<div class="row activity">
+  <div class="<%= large %> columns">
+    <div class="activity-content">
+      <p class="title">
+        <span class="event like-event"><i class="ss-icon ss-heart"></i></span>
+
+        <img class="user-avatar" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079">
+        <b>Rob Bout</b> liked 3 projects.
+      </p>
+
+      <div class="row software-row">
+        <div class="large-8 columns">
+          <%= render "software_thumbnail", apps[0] %>
+        </div>
+      </div>
+
+      <div class="row software-row">
+        <div class="large-4 columns">
+          <%= render "software_thumbnail", apps[2] %>
+        </div>
+        <div class="large-4 columns">
+          <%= render "software_thumbnail", apps[4] %>
+        </div>
+        <div class="columns"></div>
+      </div>
+    </div>
+  </div>
+  <div class="large-2 columns"></div>
+  <div class="<%= small %> columns">
+    <div class="activity-sidebar">
+      <div class="section">
+        <%= link_to "Find similar projects", "#", class: "button medium secondary" %>
+      </div>
+    </div>
+  </div>
+</div>

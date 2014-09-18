@@ -11,6 +11,10 @@ body, html
   padding: $header-padding * 1.5 0 0
   color: white
 
+  .user-avatar.huge
+    position: relative
+    top: 20px
+
   h1, h2, h3, h4
     font-weight: normal
     color: white
@@ -445,6 +449,10 @@ $large-user-avatar-size: $user-avatar-size * 3
   &.large
     height: $large-user-avatar-size
     width: $large-user-avatar-size
+
+  &.huge
+    width: 80%
+    height: auto
 
 .comment-thumbnail
   .description

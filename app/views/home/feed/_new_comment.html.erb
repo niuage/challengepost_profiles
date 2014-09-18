@@ -1,0 +1,21 @@
+<div class="row activity">
+  <div class="<%= large %> columns">
+    <div class="activity-content">
+      <p class="title">
+        <span class="event new-comment-event"><i class="ss-icon ss-chat"></i></span>
+
+        <img class="user-avatar" src="http://s3.amazonaws.com/challengepost/photos/production/user_photos/000/127/180/datas/profile.jpg?1398969079">
+        <b>Berman</b> left a comment on your sofware <b><%= link_to "Elevator", projects_path %></b>.
+      </p>
+
+      <%= render "comment" %>
+    </div>
+  </div>
+  <div class="<%= small %> columns">
+    <div class="activity-sidebar">
+      <div class="section">
+        <%= link_to "Answer", "#", class: "button medium secondary comment" %>
+      </div>
+    </div>
+  </div>
+</div>
