@@ -3,11 +3,12 @@
 <head>
   <title>Profile</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= yield :head %>
 </head>
-<body>
+<body id="<%= params[:controller].split("/").first %>">
 
 <%= render "global_header" %>
 

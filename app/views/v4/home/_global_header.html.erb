@@ -1,0 +1,32 @@
+<header id="global-header" class="clearfix">
+  <div class="large-3 columns" id="logo">
+    <h1>cpost</h1>
+  </div>
+
+  <div class="large-9 columns">
+    <ul class="no-bullet">
+      <li class="current">
+        <%= link_to "#" do %>
+          Feed
+        <% end %>
+      </li>
+      <li><%= link_to "Explore", "#" %></li>
+
+      <li>
+        <%= text_field_tag "search" %>
+      </li>
+
+      <li class="right">
+        <%= link_to "#", id: "upload" do %>
+          <i class="fa fa-cloud-upload"></i>
+        <% end %>
+      </li>
+      <li class="right">
+        <%= link_to "#" do %>
+          <%= image_tag my_avatar, class: "user-avatar" %>
+          NiuAge
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</header>

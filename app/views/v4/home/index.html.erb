@@ -1,0 +1,50 @@
+<div class="large-3 columns">
+
+  <div id="page-sidebar" class="clearfix">
+    <figure id="cover" style="background: url(/assets/britneycover.png) center top; background-size: cover">
+    </figure>
+
+    <div class="large-12 columns">
+      <div id="user-intro">
+        <figure>
+          <%= image_tag "britavatar.png", class: "user-avatar" %>
+        </figure>
+
+        <h1>Britney Spuuurs</h1>
+
+        <p>
+          Ruby on Rails developer at @ChallengePost.
+          I love designing and building user-facing features that make a difference.
+        </p>
+
+        <div id="header-details">
+          <p class="info">
+            I'm a
+            <a href="#" class="occupation">
+              <i class="ss-icon ss-laptop"></i> Developer & Designer
+            </a>
+            living in
+            <a href="#" class="location">
+              <i class="ss-icon ss-location"></i>New York, NY
+            </a>.
+            You can find me on
+            <a href="#" class="github">
+              <i class="ss-icon ss-social ss-octocat"></i>
+              GitHub
+            </a>
+            &amp; at
+            <a href="#" class="website">
+              <i class="ss-icon ss-globe"></i>
+              hellorobin.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="large-9 columns" id="main-content">
+  <%= render "header" %>
+  <%= render "content", container_size: 10 %>
+</div>
